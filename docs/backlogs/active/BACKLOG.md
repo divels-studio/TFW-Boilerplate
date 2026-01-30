@@ -11,7 +11,7 @@ TFW е workflow skeleton за “vibe coding” с AI агенти (Codex/Cursor
 
 ## Ticket Tracker
 
-- Next: TFW-007
+- Next: TFW-008
 
 ---
 
@@ -20,12 +20,12 @@ TFW е workflow skeleton за “vibe coding” с AI агенти (Codex/Cursor
 ---
 id: TFW-001
 type: feature
-status: queued
+status: done
 priority: p0
 docs_impact:
   - docs/workflow/VERIFY_PROTOCOL.md
 verify:
-  - Start help site and open 3 docs pages
+  - Run `node tools/scripts/verify-help.mjs`
 done:
   - Help site renders markdown from docs folder
   - Basic nav works
@@ -130,4 +130,24 @@ done:
   - `scripts/tfw.ps1` and `scripts/tfw.sh` exist
   - Commands: help, validate, checkpoint
   - Defaults are safe (no destructive actions)
+---
+
+## TFW-008 — Start Project generator (agent-driven)
+
+---
+id: TFW-008
+type: feature
+status: next
+priority: p0
+docs_impact:
+  - docs/guides/HOW_TO.md
+  - docs/ai/AGENT_PACKS.md
+verify:
+  - Run one command and get initial backlog+docs populated
+done:
+  - One “start project” command asks 5 questions and writes:
+    - `docs/backlogs/active/BACKLOG.md` (Brief + MVP tickets)
+    - `docs/DECISIONS.md` (stack choice)
+    - baseline docs: STACK/ARCH/FOUNDATIONS/UI (UI can be N/A)
+  - Works without choosing a specific language/framework
 ---
