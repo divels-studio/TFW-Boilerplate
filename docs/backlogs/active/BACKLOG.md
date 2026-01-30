@@ -55,3 +55,51 @@ done:
   - Clear minimal workflow docs
 ---
 
+## TFW-004 — Docs: “How To” for vibe + ticket-first
+
+---
+id: TFW-004
+type: docs
+status: queued
+priority: p0
+docs_impact:
+  - docs/guides/HOW_TO.md
+verify:
+  - Read-through and follow as checklist
+done:
+  - Has “Start Project” flow
+  - Has module development rules
+  - Lists what automation should do
+---
+
+## TFW-005 — Agent Packs: Codex/Cursor/Claude/Gemini adapters
+
+---
+id: TFW-005
+type: feature
+status: queued
+priority: p0
+docs_impact:
+  - docs/ai/AGENT_PACKS.md
+verify:
+  - Each agent has a minimal “Start Project” entrypoint
+done:
+  - Separate packs that don’t modify the canon docs format
+  - Consistent commands/UX across agents
+---
+
+## TFW-006 — Tooling: checkpoint updates memory + session log
+
+---
+id: TFW-006
+type: chore
+status: queued
+priority: p1
+docs_impact:
+  - SESSION_MEMORY.md
+  - docs/workflow/SESSION_LOG.md
+verify:
+  - Run checkpoint once and see files updated
+done:
+  - One command updates session memory + appends session log
+---

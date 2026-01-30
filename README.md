@@ -24,3 +24,8 @@
 - Roadmap: `ROADMAP.md`
 - Changelog: `CHANGELOG.md`
 - Version: `VERSION`
+
+## Session memory
+
+- Handoff: `SESSION_MEMORY.md`
+- Detailed log: `docs/workflow/SESSION_LOG.md`

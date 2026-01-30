@@ -35,3 +35,26 @@
 
 **Consequences:** Добавяме CI job, който fail-ва при non-docs промени без docs/decision/changelog update.
 
+## 2026-01-30 — TFW-003: Skeleton-only + agent chooses stack
+
+**Context:** Boilerplate-ът е за nuub/vibe dev и трябва да работи за всякакви проекти.
+
+**Decision:** TFW доставя само workflow skeleton. Агентът пита “Какъв проект ще правим днес?” и после избира stack/език.
+
+**Consequences:** Не поддържаме “готов app template” като канон; това е responsibility на агента/профила.
+
+## 2026-01-30 — TFW-004: Universal single-file backlog
+
+**Context:** Искаме един формат, който работи еднакво за Codex/Cursor/Claude/Gemini.
+
+**Decision:** Backlog-ът е един активен файл с много tickets: `docs/backlogs/active/BACKLOG.md`.
+
+**Consequences:** Tooling-ът валидира `Next:` и frontmatter полета, вместо да разчита на структура от много файлове.
+
+## 2026-01-30 — TFW-005: Versioning is for TFW, not for the user
+
+**Context:** Vibe dev-ът не трябва да мисли за версии.
+
+**Decision:** SemVer + tags са за развитие на TFW repo. Потребителят работи със skeleton-а, а tooling/agent pack-ите трябва да са “zero‑maintenance”.
+
+**Consequences:** Добавяме “how-to” и future automation (checkpoint/update) така че user да не управлява версии ръчно.
