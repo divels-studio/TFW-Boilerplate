@@ -33,6 +33,10 @@ Agent pack-ът е само “адаптер”, който:
 5. Обновява `## Brief` в backlog-а и генерира първите tickets (MVP).
 6. Попълва минимум docs: `STACK.md`, `ARCHITECTURE.md`, `FOUNDATIONS.md`, `UI_STANDARDS.md` (или N/A).
 
+Ако проектът идва от TFW skeleton, агентът може да използва генератора:
+
+- `scripts/tfw.ps1 start` (Windows) или `scripts/tfw.sh start` (macOS/Linux)
+
 ## Codex (OpenAI Codex CLI)
 
 Пакетът живее в `.codex/skills/`:
@@ -56,4 +60,3 @@ Agent pack-ът е само “адаптер”, който:
 Пакетът е един файл:
 
 - `GEMINI.md` — инструкции + entrypoint
-

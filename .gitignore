@@ -2,6 +2,7 @@
 .next/
 out/
 dist/
+.tfw/
 .env.local
 tools/docs-site/.env.local
 .DS_Store

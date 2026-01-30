@@ -37,3 +37,4 @@
 
 - `scripts/tfw.ps1 validate` / `scripts/tfw.sh validate`
 - `scripts/tfw.ps1 checkpoint` / `scripts/tfw.sh checkpoint`
+- `scripts/tfw.ps1 start` / `scripts/tfw.sh start`

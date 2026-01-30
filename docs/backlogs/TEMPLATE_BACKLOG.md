@@ -12,14 +12,14 @@
 
 ## Ticket Tracker
 
-- Next: TFW-000
+- Next: PRJ-001
 
 ---
 
-## TFW-000 — <Title>
+## PRJ-001 — <Title>
 
 ---
-id: TFW-000
+id: PRJ-001
 type: feature
 status: next
 priority: p0
@@ -30,4 +30,3 @@ verify:
 done:
   - <Definition of done>
 ---
-

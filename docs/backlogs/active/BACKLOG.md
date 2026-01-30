@@ -11,7 +11,7 @@ TFW е workflow skeleton за “vibe coding” с AI агенти (Codex/Cursor
 
 ## Ticket Tracker
 
-- Next: TFW-008
+- Next: TFW-002
 
 ---
 
@@ -36,7 +36,7 @@ done:
 ---
 id: TFW-002
 type: chore
-status: queued
+status: next
 priority: p0
 docs_impact:
   - docs/setup/ENV.md
@@ -137,13 +137,13 @@ done:
 ---
 id: TFW-008
 type: feature
-status: next
+status: done
 priority: p0
 docs_impact:
   - docs/guides/HOW_TO.md
   - docs/ai/AGENT_PACKS.md
 verify:
-  - Run one command and get initial backlog+docs populated
+  - Run `scripts/tfw.ps1 start --non-interactive --out-dir .tfw/sample --force --product "Demo" --audience "Demo" --must "a,b,c" --constraints "no constraints"`
 done:
   - One “start project” command asks 5 questions and writes:
     - `docs/backlogs/active/BACKLOG.md` (Brief + MVP tickets)

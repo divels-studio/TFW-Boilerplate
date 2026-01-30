@@ -1,10 +1,10 @@
 param(
   [Parameter(Position = 0)]
-  [ValidateSet('help','validate','checkpoint','status')]
+  [ValidateSet('help','validate','checkpoint','start','status')]
   [string]$Command = 'help',
 
-  [Parameter(Position = 1)]
-  [string]$Arg1 = ''
+  [Parameter(ValueFromRemainingArguments = $true)]
+  [string[]]$Rest = @()
 )
 
 $ErrorActionPreference = 'Stop'
@@ -23,7 +23,7 @@ function Run-Node {
 switch ($Command) {
   'help' {
     $port = 0
-    if ($Arg1) { $port = [int]$Arg1 }
+    if ($Rest.Length -gt 0 -and $Rest[0]) { $port = [int]$Rest[0] }
     if ($port -gt 0) {
       & (Join-Path $PSScriptRoot 'help.ps1') -Port $port
     } else {
@@ -47,6 +47,13 @@ switch ($Command) {
     break
   }
 
+  'start' {
+    $root = Get-RepoRoot
+    Set-Location $root
+    node tools/scripts/start-project.mjs @Rest
+    break
+  }
+
   'status' {
     $root = Get-RepoRoot
     Set-Location $root
@@ -54,4 +61,3 @@ switch ($Command) {
     break
   }
 }
-

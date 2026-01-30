@@ -41,3 +41,4 @@
 - `scripts/tfw.ps1 help` / `scripts/tfw.sh help` — HTML docs
 - `scripts/tfw.ps1 validate` / `scripts/tfw.sh validate` — проверки (локално soft)
 - `scripts/tfw.ps1 checkpoint` / `scripts/tfw.sh checkpoint` — handoff + session log
+- `scripts/tfw.ps1 start` / `scripts/tfw.sh start` — генерира initial backlog + baseline docs
