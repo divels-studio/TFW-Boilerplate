@@ -11,7 +11,7 @@ TFW е workflow skeleton за “vibe coding” с AI агенти (Codex/Cursor
 
 ## Ticket Tracker
 
-- Next: TFW-002
+- Next: TFW-003
 
 ---
 
@@ -36,7 +36,7 @@ done:
 ---
 id: TFW-002
 type: chore
-status: next
+status: done
 priority: p0
 docs_impact:
   - docs/setup/ENV.md
