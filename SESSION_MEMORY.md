@@ -36,3 +36,9 @@ TFW Boilerplate е **workflow skeleton** за “вайб” разработк�
   - decision triggers checks
   - changelog discipline (по избор)
 
+## Last checkpoint
+
+- Date: 2026-01-30
+- Next: TFW-006
+- Branch: master
+- Head: dbe9493 docs: add agent packs + start entrypoints (TFW-005)
