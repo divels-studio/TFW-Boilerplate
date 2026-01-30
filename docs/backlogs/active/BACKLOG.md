@@ -1,5 +1,14 @@
 # Backlog (Active)
 
+## Brief
+
+TFW е workflow skeleton за “vibe coding” с AI агенти (Codex/Cursor/Claude/Gemini), базиран на Ticket‑First.
+
+- Канон (rules+docs): `AI_BRIEF.md`
+- Работи по `Next:` ticket
+- Всеки ticket има `done` + `verify` + `docs_impact`
+- Нови решения → `docs/DECISIONS.md`
+
 ## Ticket Tracker
 
 - Next: TFW-001
