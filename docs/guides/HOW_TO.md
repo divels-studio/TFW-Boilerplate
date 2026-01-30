@@ -9,6 +9,14 @@
 3. Всеки ticket има `done` + `verify` + `docs_impact`.
 4. Ново решение → запис в `docs/DECISIONS.md`.
 
+## TL;DR (за nuub)
+
+- Стартирай help: `scripts/tfw.ps1 help` / `scripts/tfw.sh help`
+- Стартирай проект (генерира първи backlog+docs): `scripts/tfw.ps1 start` / `scripts/tfw.sh start`
+- Работи само по `Next:` ticket
+- Пускай `scripts/tfw.ps1 validate` преди да кажеш “готово”
+- Пускай `scripts/tfw.ps1 checkpoint` преди нова сесия
+
 ## “Start Project” flow (какво прави агентът)
 
 1. Пита: “Какъв проект ще правим днес?”
@@ -30,6 +38,12 @@
 - UI standards update ако модула има UI
 - Verify steps, които може да повториш
 
+## Ticket discipline (за да не стане мазало)
+
+- `Next:` е единствената “опашка” → 1 активен ticket.
+- Ако ти хрумне ново нещо: добави ticket със `status: queued`, но не прекъсвай `Next:` без причина.
+- Ако билетът е твърде голям: split в 2–5 tickets (по “вертикални” парчета).
+
 ## Какво трябва да автоматизира TFW (цел)
 
 - `validate`: checks за backlog формата + `Next:` + frontmatter consistency.
@@ -42,3 +56,12 @@
 - `scripts/tfw.ps1 validate` / `scripts/tfw.sh validate` — проверки (локално soft)
 - `scripts/tfw.ps1 checkpoint` / `scripts/tfw.sh checkpoint` — handoff + session log
 - `scripts/tfw.ps1 start` / `scripts/tfw.sh start` — генерира initial backlog + baseline docs
+
+## Кога се пише decision (ADR-lite)
+
+Пиши в `docs/DECISIONS.md` ако:
+
+- сменяш/добавяш dependency с последствия
+- въвеждаш нов слой/граница/патърн
+- променяш UX/UI стандарти
+- въвеждаш ново “правило” за работа
