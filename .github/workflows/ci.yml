@@ -1,0 +1,44 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  enforce-docs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Enforce docs (hard)
+        env:
+          TFW_ENFORCEMENT: hard
+          GITHUB_BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
+          GITHUB_HEAD_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+        run: node tools/scripts/enforce-docs.mjs
+
+  validate-backlog:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate backlog format
+        run: node tools/scripts/validate-backlog.mjs
+
+  docs-site:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install
+        working-directory: tools/docs-site
+        run: npm install --no-audit --no-fund
+      - name: Lint
+        working-directory: tools/docs-site
+        run: npm run lint
+      - name: Build
+        working-directory: tools/docs-site
+        run: npm run build
