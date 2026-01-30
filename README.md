@@ -6,11 +6,10 @@
 
 ### Node (default)
 
-1. Влез в `tools/docs-site`
-2. Копирай `tools/docs-site/.env.example` → `tools/docs-site/.env.local` (по избор)
-3. Стартирай:
-   - Windows: `scripts/help.ps1`
-   - macOS/Linux: `scripts/help.sh`
+Най-лесно (един вход):
+
+- Windows: `scripts/tfw.ps1 help`
+- macOS/Linux: `scripts/tfw.sh help`
 
 ### Docker (опция)
 
@@ -33,3 +32,8 @@
 ## AI brief
 
 - Quick context: `AI_BRIEF.md`
+
+## Commands (one entry)
+
+- `scripts/tfw.ps1 validate` / `scripts/tfw.sh validate`
+- `scripts/tfw.ps1 checkpoint` / `scripts/tfw.sh checkpoint`

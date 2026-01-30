@@ -39,6 +39,6 @@ TFW Boilerplate е **workflow skeleton** за “вайб” разработк�
 ## Last checkpoint
 
 - Date: 2026-01-30
-- Next: TFW-006
+- Next: TFW-007
 - Branch: master
-- Head: dbe9493 docs: add agent packs + start entrypoints (TFW-005)
+- Head: 4f47496 chore: add checkpoint tool (TFW-006)

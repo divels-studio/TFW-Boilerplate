@@ -36,3 +36,8 @@
 - `enforce-docs`: когато има non-docs промени → изисква docs/decision update (локално soft, CI hard).
 - `checkpoint`: update на `SESSION_MEMORY.md` + append в `docs/workflow/SESSION_LOG.md`.
 
+## Команди (за nuub/vibe)
+
+- `scripts/tfw.ps1 help` / `scripts/tfw.sh help` — HTML docs
+- `scripts/tfw.ps1 validate` / `scripts/tfw.sh validate` — проверки (локално soft)
+- `scripts/tfw.ps1 checkpoint` / `scripts/tfw.sh checkpoint` — handoff + session log

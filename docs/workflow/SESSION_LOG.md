@@ -21,3 +21,12 @@
   - d5ca9c4 docs: add AI_BRIEF
   - b919a82 docs: capture project vision + session memory
   - 4bbf540 chore: v0.1.0 boilerplate MVP
+
+## 2026-01-30 — checkpoint
+
+- Next: TFW-007
+- Branch: master
+- To: 4f47496
+- From: dbe9493
+- Commits:
+  - 4f47496 chore: add checkpoint tool (TFW-006)

@@ -11,7 +11,7 @@ TFW е workflow skeleton за “vibe coding” с AI агенти (Codex/Cursor
 
 ## Ticket Tracker
 
-- Next: TFW-006
+- Next: TFW-007
 
 ---
 
@@ -102,7 +102,7 @@ done:
 ---
 id: TFW-006
 type: chore
-status: next
+status: done
 priority: p1
 docs_impact:
   - SESSION_MEMORY.md
@@ -111,4 +111,23 @@ verify:
   - Run checkpoint once and see files updated
 done:
   - One command updates session memory + appends session log
+---
+
+## TFW-007 — Tooling: one-command UX (`tfw help|validate|checkpoint`)
+
+---
+id: TFW-007
+type: chore
+status: done
+priority: p0
+docs_impact:
+  - README.md
+  - docs/guides/HOW_TO.md
+verify:
+  - Run `scripts/tfw.ps1 validate` and see “ok”
+  - Run `scripts/tfw.ps1 checkpoint` and see updated files
+done:
+  - `scripts/tfw.ps1` and `scripts/tfw.sh` exist
+  - Commands: help, validate, checkpoint
+  - Defaults are safe (no destructive actions)
 ---
