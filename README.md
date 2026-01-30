@@ -29,3 +29,7 @@
 
 - Handoff: `SESSION_MEMORY.md`
 - Detailed log: `docs/workflow/SESSION_LOG.md`
+
+## AI brief
+
+- Quick context: `AI_BRIEF.md`
