@@ -2,7 +2,29 @@
 
 Universal (language-agnostic) boilerplate for disciplined "ticket-first" development: backlog, protocols, decision log, roadmap, changelog, cross-model audit, and HTML help site.
 
-## Quick start (Docs / Help)
+## Quick start
+
+1. Clone: `git clone https://github.com/divels-studio/TFW-Boilerplate.git my-project`
+2. Open your AI agent (Claude Code, Codex, Cursor, or Gemini) in the project folder
+3. Say: *"What project are we building today?"*
+4. The agent asks 5 questions, picks a stack, generates backlog, and starts working
+
+## Updating TFW
+
+To get the latest TFW workflow updates without losing your project files:
+
+```bash
+# One-time setup: add TFW as upstream
+git remote add tfw https://github.com/divels-studio/TFW-Boilerplate.git
+
+# When you want to update
+git fetch tfw
+git merge tfw/master --allow-unrelated-histories
+```
+
+TFW updates touch only workflow files (`.claude/`, `AGENTS.md`, `docs/workflow/`, `docs/guides/`). Your project files (`SESSION_MEMORY.md`, `CHANGELOG.md`, `ROADMAP.md`, backlogs) won't conflict because they start as empty templates.
+
+## Docs / Help
 
 ### Node (default)
 
