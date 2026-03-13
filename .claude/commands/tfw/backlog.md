@@ -8,6 +8,10 @@ allowed-tools: Read, Edit, Write, AskUserQuestion
 
 Create or update a backlog in `docs/backlogs/active/`.
 
+## Prerequisites
+- A **plan must exist and be approved** before creating a backlog. If there is no plan, tell the user to enter Plan Mode first.
+- The plan defines the package structure and scope — the backlog converts it into executable tickets.
+
 ## Instructions
 
 1. If backlog exists: open it and append/adjust tickets (no duplicates).
@@ -17,15 +21,48 @@ Create or update a backlog in `docs/backlogs/active/`.
    - `docs/ai/NON_NEGOTIABLES.md` — quality guardrails
    - `docs/ai/DEFINITION_OF_DONE.md` — when a ticket is truly done
 4. Ask up to **7 critical questions** if info is missing, then stop.
-5. Ensure the backlog has:
-   - `## Brief` at the top (Goal, Status, Next Actions, Key Paths)
-   - `## Ticket Tracker` with `Progress: X/N`, `Next: <ID>`, checklist `- [ ] <ID> — <Title>`
+5. Create the backlog with all required sections (see below).
+6. **After creation → STOP.** Ask the user: "Backlog is ready. Want me to start executing, or do you want to review first?" Do NOT auto-execute.
+
+## Backlog Structure (mandatory)
+
+### Brief (at top)
+- `## Brief` with: Goal, Scope (in/out), Execution Model, Key Paths, Status
+
+### Package System
+- Tickets are organized in **packages** (logical groups of related work)
+- Each package has:
+  - A name and purpose (e.g., "Package 0 — Project Setup", "Package 1 — Data Model")
+  - **Prerequisites** — which packages must be Done before this one starts
+  - **Gate exit criteria** — what must be true for this package to be considered Done
+- There is **no limit** on ticket count — create as many as needed (10, 50, 500+)
+- Packages execute in order (unless explicitly parallelizable)
+
+### Ticket Tracker format
+```markdown
+## Ticket Tracker
+
+Progress: 0/N
+Next: PRJ-001
+
+### Package 0 — <Name>
+Prerequisites: none
+Gate: <exit criteria>
+- [ ] PRJ-001 — <Title>
+- [ ] PRJ-002 — <Title>
+
+### Package 1 — <Name>
+Prerequisites: Package 0 Done
+Gate: <exit criteria>
+- [ ] PRJ-003 — <Title>
+- [ ] PRJ-004 — <Title>
+```
 
 ## Ticket Format (mandatory)
 
 Each ticket MUST include:
 
-- **ID + Title** — `T-001 — Short description`
+- **ID + Title** — `PRJ-001 — Short description`
 - **Goal** — what and why (1-2 sentences)
 - **Scope** — what's in (2-5 bullets)
 - **Out of scope** — what's explicitly out

@@ -6,20 +6,47 @@
 
 ## Brief
 
-Describe "what we're building" in 3-6 bullets:
+### Goal
+- What we're building and why (1-2 sentences)
 
-- What product/tool (1 sentence)
-- Target audience
-- Must-have goals (up to 5)
-- Non-goals (what we explicitly don't build)
-- Constraints (deadline / budget / tech limitations)
+### Scope
+- Includes: (3-6 bullets)
+- Does NOT include: (2-4 bullets)
+
+### Execution Model
+- How packages relate to each other
+- Gate/audit rules (if any)
+
+### Key Paths
+- `src/...`
+- `docs/...`
+
+### Status
+- **ACTIVE** — current state description
+
+---
 
 ## Ticket Tracker
 
-- **Progress:** 0/1
-- **Next:** PRJ-001
+Progress: 0/N
+Next: PRJ-001
 
+### Package 0 — <Name> (e.g., Project Setup)
+Prerequisites: none
+Gate: <what must be true for this package to be Done>
 - [ ] PRJ-001 — <Title>
+- [ ] PRJ-002 — <Title>
+
+### Package 1 — <Name> (e.g., Data Model)
+Prerequisites: Package 0 Done
+Gate: <exit criteria>
+- [ ] PRJ-003 — <Title>
+- [ ] PRJ-004 — <Title>
+
+### Package 2 — <Name> (e.g., Core Features)
+Prerequisites: Package 1 Done
+Gate: <exit criteria>
+- [ ] PRJ-005 — <Title>
 
 ---
 
@@ -34,9 +61,9 @@ Describe "what we're building" in 3-6 bullets:
 - What's explicitly NOT part of this ticket
 
 **Acceptance Criteria:**
-- [ ] Criterion 1 (testable, specific)
-- [ ] Criterion 2
-- [ ] Criterion 3
+1. Criterion 1 (testable, specific)
+2. Criterion 2
+3. Criterion 3
 
 **Affected paths:**
 - `src/path/to/file.ts`
@@ -50,19 +77,24 @@ npm run test -- --filter=relevant-test
 # Manual: navigate to /page and verify X
 ```
 
-**Risks / Notes:**
+**Risks / Edge cases:**
 - Edge cases to watch for
 - Dependencies on other tickets
 
+**Notes for the agent:**
+- Don't touch anything outside the ticket scope.
+- If critical info is missing: **stop and ask** (up to 7 questions).
+
 ---
 
-### Metadata (optional YAML frontmatter)
+### Metadata (optional YAML frontmatter per ticket)
 
 ```yaml
 id: PRJ-001
 type: feature | fix | chore | refactor
 status: todo | in_progress | for_audit | done
 priority: p0 | p1 | p2
+package: 0
 docs_impact:
   - docs/DECISIONS.md
 ```

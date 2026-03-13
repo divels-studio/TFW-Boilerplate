@@ -22,7 +22,14 @@ Read project state and decide what to do.
   4. Any technical constraints? (language, framework, hosting)
   5. What are the non-goals? (what we explicitly won't build)
 - Propose 1-2 stack options → record in `docs/DECISIONS.md`
-- Fill `## Brief` in the backlog and generate 10-15 MVP tickets
+- **Enter Plan Mode** — plan the full project:
+  - System modules, data model, key flows
+  - Package breakdown (logical groups of related work)
+  - Dependencies between packages
+  - Risk areas requiring Enterprise-level tickets
+- **Wait for user to approve the plan.** Do NOT proceed without explicit approval.
+- After approval → run `/tfw:backlog` to create the ticket system from the plan
+- After backlog is created → **STOP and ask:** "Backlog is ready. Want me to start executing, or do you want to review first?"
 - Set `VERSION` to `0.1.0` and update `SESSION_MEMORY.md`
 
 **If project exists → RESUME:**
