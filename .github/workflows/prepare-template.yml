@@ -1,0 +1,38 @@
+name: Prepare Template (master)
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  prepare-template:
+    runs-on: ubuntu-latest
+    # Skip if the commit was made by this action (prevent infinite loop)
+    if: "!contains(github.event.head_commit.message, '[skip-template]')"
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Reset user files to templates
+        run: node tools/scripts/prepare-template.mjs
+
+      - name: Check for changes
+        id: check
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "changed=true" >> $GITHUB_OUTPUT
+          else
+            echo "changed=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit template reset
+        if: steps.check.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "chore: reset user files to templates [skip-template]"
+          git push
