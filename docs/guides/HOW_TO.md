@@ -65,3 +65,36 @@
 - въвеждаш нов слой/граница/патърн
 - променяш UX/UI стандарти
 - въвеждаш ново “правило” за работа
+
+---
+
+## Cross-Model Handoff (Implementor ↔ Auditor)
+
+TFW поддържа работа с два модела паралелно (напр. Claude + GPT Codex):
+
+1. **Auditor** генерира context за следващия ticket → записва в `docs/handoff/codex-to-opus.md`
+2. **Implementor** чете context → имплементира → записва FOR AUDIT summary в `docs/handoff/opus-to-codex.md`
+3. **Auditor** чете summary → одитира кода → записва findings в `docs/handoff/codex-to-opus.md`
+4. **Checkpoint** → нулира handoff файловете → следващ цикъл
+
+Правила: виж `docs/ai/HANDOFF_RULES.md` и `docs/guides/CHECKPOINT_PROTOCOL.md`.
+
+## Claude Hooks (opt-in)
+
+TFW идва с 3 TypeScript hooks за Claude Code (`.claude/hooks/`), но те са **изключени по подразбиране**. За да ги включиш:
+
+1. `cd .claude/hooks && npm install`
+2. Добави `hooks` конфигурация в `.claude/settings.json` (виж `.claude/hooks/README.md` за пълния JSON)
+3. По избор: включи build check в `.claude/hooks/hooks-config.json` (`buildCheck.enabled: true`)
+
+Hooks:
+- **skill-activation-prompt.ts** — анализира prompt-а и предлага релевантни skills от `skill-rules.json`
+- **post-tool-use-tracker.ts** — логва редактирани файлове
+- **stop-build-check.ts** — пуска build check след отговор
+
+## Multiple Backlogs
+
+Проектите могат да имат няколко backlog файла в `docs/backlogs/active/`:
+- Именуване: `BACKLOG_<NAME>.md`
+- `SESSION_MEMORY.md` реферира активния backlog
+- Завършените backlogs → `docs/backlogs/archive/NNN_BACKLOG_<NAME>_<DATE>.md`

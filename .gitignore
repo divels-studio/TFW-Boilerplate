@@ -7,3 +7,10 @@ dist/
 tools/docs-site/.env.local
 .DS_Store
 Thumbs.db
+
+# Hook runtime cache
+.claude/tsc-cache/
+
+# Handoff temp files (cross-model communication)
+docs/handoff/codex-to-opus.md
+docs/handoff/opus-to-codex.md

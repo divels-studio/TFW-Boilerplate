@@ -1,0 +1,7 @@
+{
+    "buildCheck": {
+        "enabled": false,
+        "command": "npm run type-check",
+        "cwd": "."
+    }
+}

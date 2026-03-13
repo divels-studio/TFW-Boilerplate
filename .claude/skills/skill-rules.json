@@ -1,0 +1,5 @@
+{
+    "version": "1.0",
+    "description": "Skill activation triggers for TFW projects. Add your project-specific skills here. The skill-activation-prompt.ts hook reads this file to suggest relevant skills. Hooks must be enabled first — see .claude/hooks/README.md.",
+    "skills": {}
+}

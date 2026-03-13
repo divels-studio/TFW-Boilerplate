@@ -1,44 +1,32 @@
 # SESSION_MEMORY (TFW-Boilerplate)
 
-Кратка “handoff” памет за следващи сесии.
+Short "handoff" memory for next sessions.
 
-## Какво правим
+## What we're building
 
-TFW Boilerplate е **workflow skeleton** за “вайб” разработка с AI агенти (Codex/Cursor/Claude/Gemini), базиран на **Ticket‑First**.
+TFW Boilerplate is a **workflow skeleton** for "vibe" development with AI agents (Codex/Cursor/Claude/Gemini), based on **Ticket-First**.
 
-Проектът е **language‑agnostic**: не налага stack/език. Агентът избира stack след като попита: “Какъв проект ще правим днес?”.
+The project is **language-agnostic**: doesn't impose a stack/language. The agent chooses stack after asking: "What project are we building today?".
 
-## Канон (source of truth)
+## Canon (source of truth)
 
-- Backlog: `docs/backlogs/active/BACKLOG.md` (един файл, много tickets, Markdown + frontmatter)
-- Decisions: `docs/DECISIONS.md` (един файл)
-- Протоколи: `docs/workflow/`
+- Backlog: `docs/backlogs/active/BACKLOG*.md` (multiple files, Markdown + frontmatter)
+- Decisions: `docs/DECISIONS.md` (single file)
+- Agent rules: `AGENTS.md`
+- Protocols: `docs/workflow/`
+- Handoff: `docs/handoff/` (cross-model communication)
 - Foundations/Architecture/Stack/UI standards: `docs/*`
-- Версия на boiler-а: `VERSION` (SemVer) + tags `vX.Y.Z`
+- Boilerplate version: `VERSION` (SemVer) + tags `vX.Y.Z`
 
-## HTML документация
+## Key decisions (brief)
 
-- Help site (Next) е само viewer за `docs/` и служи като “how-to”.
-- Стартира се с `scripts/help.ps1` / `scripts/help.sh` или Docker (`docker compose up --build docs`).
-
-## Важни решения (кратко)
-
-- Boiler-ът е за nuub/vibe dev → **той не мисли за версии**; versioning е за развитието на TFW.
-- Инсталацията е “skeleton” + agent pack-и; stack изборът се случва след старта.
-- Backlog форматът е универсален за всички агенти/проекти.
-
-## Next (какво следва)
-
-- Направи “Agent Packs” (Codex/Cursor/Claude/Gemini) като отделни адаптери, без да пипат канона.
-- Добави “Start Project” протокол: агентът пита за идея → генерира първи backlog + основни docs + първи decisions.
-- Добави automation за:
-  - session memory updates
-  - decision triggers checks
-  - changelog discipline (по избор)
+- Boilerplate is for nuub/vibe dev → **they don't think about versions**; versioning is for TFW development.
+- Installation is "skeleton" + agent packs; stack choice happens after start.
+- Backlog format is universal for all agents/projects.
+- v0.2.0: Added cross-model handoff, hooks, audit skills, agents, checkpoint protocol.
 
 ## Last checkpoint
 
-- Date: 2026-01-30
-- Next: TFW-007
+- Date: 2026-03-13
+- Version: 0.2.0
 - Branch: master
-- Head: 4f47496 chore: add checkpoint tool (TFW-006)

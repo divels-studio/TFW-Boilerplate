@@ -1,27 +1,29 @@
 # AI_BRIEF (TFW-Boilerplate)
 
-TFW е workflow skeleton за “vibe coding” с AI агенти (Codex/Cursor/Claude/Gemini), базиран на Ticket‑First.
+TFW is a workflow skeleton for "vibe coding" with AI agents (Codex/Cursor/Claude/Gemini), based on Ticket-First.
 
-## Канон
+## Canon
 
-- Backlog: `docs/backlogs/active/BACKLOG.md` (един файл, много tickets, Markdown + frontmatter)
-- Decisions: `docs/DECISIONS.md` (един файл)
+- Backlog: `docs/backlogs/active/BACKLOG*.md` (multiple files supported, Markdown + frontmatter)
+- Decisions: `docs/DECISIONS.md` (single file)
+- Agent rules: `AGENTS.md` (detailed rules for all agents)
 - How-to: `docs/guides/HOW_TO.md`
 - Protocols: `docs/workflow/`
-- Версия на TFW (за развитие на boiler-а): `VERSION` + git tags `vX.Y.Z`
+- Handoff: `docs/handoff/` (cross-model Implementor ↔ Auditor communication)
+- TFW version (for boilerplate development): `VERSION` + git tags `vX.Y.Z`
 
-## Правила (минимум)
+## Rules (minimum)
 
-- Работи само по `Next:` ticket (освен emergency → после ticket).
-- Всеки ticket има `done` + `verify` + `docs_impact`.
-- Ново решение/патърн/инструмент → запис в `docs/DECISIONS.md`.
+- Work only on `Next:` ticket (except emergency → then create ticket).
+- Every ticket has `done` + `verify` + `docs_impact`.
+- New decision/pattern/tool → record in `docs/DECISIONS.md`.
 
 ## Help (HTML docs)
 
-- Node: `scripts/help.ps1` / `scripts/help.sh`
+- Node: `scripts/tfw.ps1 help` / `scripts/tfw.sh help`
 - Docker: `docker compose up --build docs`
 
 ## Handoff
 
-- `SESSION_MEMORY.md` е краткото “какво правим” за нови сесии.
-
+- `SESSION_MEMORY.md` — short "what we're doing" for new sessions.
+- `docs/handoff/` — cross-model handoff (see `docs/ai/HANDOFF_RULES.md`).
