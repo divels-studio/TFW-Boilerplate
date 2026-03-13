@@ -56,6 +56,39 @@ Both files are **reset** (emptied) during checkpoint. They are `.gitignore`-d.
 
 ---
 
+## Ticket Quality
+
+Every ticket must be **one-pass implementable** — no guessing, no ambiguity.
+
+### Required files (read before creating/working tickets)
+- `docs/ai/TICKETS_TEMPLATE.md` — full ticket structure
+- `docs/ai/NON_NEGOTIABLES.md` — rules that are never violated
+- `docs/ai/DEFINITION_OF_DONE.md` — when a ticket is truly done
+
+### Required sections per ticket
+- **Goal** — what and why (1-2 sentences)
+- **Scope** — what's in (2-5 bullets)
+- **Out of scope** — what's explicitly out
+- **Acceptance Criteria** — testable conditions (numbered list)
+- **Risks / Edge cases** — what could go wrong
+- **Affected paths** — files/dirs to touch
+- **Verify** — exact commands to validate
+
+### Enterprise notes (for DB/API/auth/complex tickets)
+Add `## Implementation Notes (Enterprise)` with:
+- Must-fix blockers (2-6 bullets)
+- Cache/Idempotency key (components + collision policy)
+- Server-only boundaries (what MUST NOT reach client)
+- Multi-tenancy scoping
+- DoD tests (minimum 2-4)
+- Failure modes (error codes + UX)
+
+### Quality expectations
+- Production-grade, not toy demos
+- Error handling, input validation, edge cases
+- Responsive design and accessibility where applicable
+- Concrete verify commands, not vague "check visually"
+
 ## Don'ts
 
 - Don't finalize git operations unless the user explicitly asks

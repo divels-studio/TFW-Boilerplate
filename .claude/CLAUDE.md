@@ -19,8 +19,22 @@ When you detect an empty/new project:
    - Any technical constraints? (language, framework, hosting)
    - What are the non-goals? (what we explicitly won't build)
 3. Propose 1-2 stack options → record in `docs/DECISIONS.md`
-4. Fill `## Brief` in the backlog and generate 10-15 MVP tickets
-5. Set `VERSION` to `0.1.0` and update `SESSION_MEMORY.md`
+4. Read these files for ticket format and rules:
+   - `docs/ai/TICKETS_TEMPLATE.md` — full ticket structure
+   - `docs/ai/NON_NEGOTIABLES.md` — quality guardrails
+   - `docs/ai/DEFINITION_OF_DONE.md` — when a ticket is done
+5. Fill `## Brief` in the backlog (Goal, Status, Next Actions, Key Paths)
+6. Generate 10-15 MVP tickets using the **full ticket format** from the template. Each ticket MUST have: Goal, Scope, Out of scope, Acceptance Criteria, Risks, Affected paths, Verify commands.
+7. Add `## Ticket Tracker` with checkboxes (`- [ ] T-001 — Title`), Progress, Next
+8. Set `VERSION` to `0.1.0` and update `SESSION_MEMORY.md`
+
+## Quality Standard
+- Aim for **production-grade** quality, not toy demos
+- Tickets must be **one-pass implementable** — detailed enough that the agent doesn't need to guess
+- Every ticket needs concrete verify commands (exact shell commands or specific manual steps)
+- Consider: error handling, input validation, accessibility, responsive design, SEO
+- For DB/API/auth tickets: include Implementation Notes (Enterprise) section
+- Follow `docs/ai/NON_NEGOTIABLES.md` at all times
 
 ## Canon
 - `AI_BRIEF.md` — project overview
