@@ -1,32 +1,25 @@
-# SESSION_MEMORY (TFW-Boilerplate)
+# SESSION_MEMORY
 
 Short "handoff" memory for next sessions.
 
 ## What we're building
 
-TFW Boilerplate is a **workflow skeleton** for "vibe" development with AI agents (Codex/Cursor/Claude/Gemini), based on **Ticket-First**.
-
-The project is **language-agnostic**: doesn't impose a stack/language. The agent chooses stack after asking: "What project are we building today?".
+<!-- Describe your project in 1-2 sentences -->
 
 ## Canon (source of truth)
 
-- Backlog: `docs/backlogs/active/BACKLOG*.md` (multiple files, Markdown + frontmatter)
-- Decisions: `docs/DECISIONS.md` (single file)
+- Backlog: `docs/backlogs/active/BACKLOG*.md`
+- Decisions: `docs/DECISIONS.md`
 - Agent rules: `AGENTS.md`
 - Protocols: `docs/workflow/`
 - Handoff: `docs/handoff/` (cross-model communication)
-- Foundations/Architecture/Stack/UI standards: `docs/*`
-- Boilerplate version: `VERSION` (SemVer) + tags `vX.Y.Z`
 
 ## Key decisions (brief)
 
-- Boilerplate is for nuub/vibe dev → **they don't think about versions**; versioning is for TFW development.
-- Installation is "skeleton" + agent packs; stack choice happens after start.
-- Backlog format is universal for all agents/projects.
-- v0.2.0: Added cross-model handoff, hooks, audit skills, agents, checkpoint protocol.
+<!-- Add key decisions as you make them -->
 
 ## Last checkpoint
 
-- Date: 2026-03-13
-- Version: 0.2.0
+- Date: —
+- Version: 0.0.0
 - Branch: master
