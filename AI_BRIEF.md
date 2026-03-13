@@ -1,16 +1,15 @@
-# AI_BRIEF (TFW-Boilerplate)
+# AI_BRIEF
 
-TFW is a workflow skeleton for "vibe coding" with AI agents (Codex/Cursor/Claude/Gemini), based on Ticket-First.
+<!-- One-paragraph project summary for AI agents -->
 
 ## Canon
 
-- Backlog: `docs/backlogs/active/BACKLOG*.md` (multiple files supported, Markdown + frontmatter)
+- Backlog: `docs/backlogs/active/BACKLOG*.md` (multiple files supported)
 - Decisions: `docs/DECISIONS.md` (single file)
 - Agent rules: `AGENTS.md` (detailed rules for all agents)
 - How-to: `docs/guides/HOW_TO.md`
 - Protocols: `docs/workflow/`
 - Handoff: `docs/handoff/` (cross-model Implementor ↔ Auditor communication)
-- TFW version (for boilerplate development): `VERSION` + git tags `vX.Y.Z`
 
 ## Rules (minimum)
 
